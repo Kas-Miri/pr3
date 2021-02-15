@@ -1,26 +1,31 @@
 <header>
-<h1 class="text-center m-4"></h1>
+    <h1 class="text-center m-4"></h1>
 </header>
 
-<div class="container">
-<div class="row">
-<form action="/admin/edit" method="POST">
-<input name="id" hidden value="{{id}}">
+<div class="container d-flex flex-column align-items-stretch w-50">
+    <div class="row">
+        <form action="/admin/edit" method="POST" id="edit-form" class="col align-items-center">
+            <input name="id" hidden value="{{id}}">
 
-<div>
-<label for="title">Название</label>
-<input id="title" name="title" value="{{title}}">
-</div>
+            <div class="mb-3">
+                <label class="form-label" for="title">Название</label>
+                <input class="form-control" id="title" name="title" value="{{title}}">
+            </div>
 
-<div>
-<label for="text">Описание</label>
-<textarea id="text" name="text">{{text}}</textarea>
-</div>
+            <div class="mb-3">
+                <label class="form-label" for="text">Описание</label>
+                <textarea class="form-control" id="text" name="text" rows="3">{{text}}</textarea>
+            </div>
 
-<div>
-<button type="reset">Очистить</button>
-<button>Сохранить</button>
-</div>
-</form>
-</div>
+            <div class="mb-3">
+                <label class="form-label" for="photoUrl">Ссылка на фото</label>
+                <input class="form-control" id="photoUrl" name="photoUrl" value="{{photoUrl}}">
+            </div>
+
+            <div class="d-flex justify-content-end">
+                <input type="reset" class="btn btn-primary me-2" value="Отменить изменения">
+                <input type="submit" class="btn btn-primary" value="Сохранить">
+            </div>
+        </form>
+    </div>
 </div>

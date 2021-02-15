@@ -4,16 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Заметки</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <base href="/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link id="page-style" href="css/theme-light.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light mb-3">
+        <div class="container">
+            <a class="navbar-brand" href="/">Заметки</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">О проекте</a>
+                    </li>
+                </ul>
+
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="theme-switch">
+                    <label class="form-check-label" for="theme-switch" id="theme-label">Светлая тема</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     {{{body}}}
 
-    <footer>
-        <p class="text-center text-secondary">&COPY; Самая маленькая кошечка</p>
+    <footer class="mt-5">
+        <p>&COPY; Шарфина К.</p>
+        <p>2021</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <script src="js/themeSwitcher.js"></script>
 </body>
 
 </html>
